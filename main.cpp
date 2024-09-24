@@ -33,6 +33,7 @@ struct vec0 {
 		realloc(sz+1,0);
 		((char*)ptr)[sz-1] = a;
 	}
+	//
 	template<typename T>
 	void strappend(T*a) {
 		if (sizeof(a)==sizeof(void*)) {
