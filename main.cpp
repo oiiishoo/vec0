@@ -4,7 +4,7 @@ struct vec0 {
 	//size_t len;
 	size_t sz;
 	void* ptr;
-	//Shouldn't be used by user if they already had initialized the object
+	//Use it to clear without something else
 	vec0() {
 		if (ptr)delete ptr;
 		sz = 0;
