@@ -3,19 +3,20 @@
 #include <stdlib.h>
 
 //idk guide
-// use only dynamically allocated so your field should to contain an ptr address, the use in this case should be like &chararr, when chararr is mallocated ptr that 0 terminated, and can be reassigned either undefined behaviour;
-// function should get &str as input, if len changes it will reassign a new mallocated ptr else stays same place, static in plans
+// use only dynamically allocated so your field should to contain an ptr address, the use in this case should be like &chararr, when chararr is allocated ptr that 0, the task will be terminated, and can be reassigned either if used onStack array will be UB;
+// to the dev
+// function should get &str as input, if len changes it will reassign a new allocated ptr, else stays same place, static in plans(dont think but looks cool for those who use array on the stack)
 
 
 
-//algorithm utilization O(2n)
+
 size_t len(char*arr) {
     size_t i=0;
     while (arr[i] != 0)i++;
     return i;
 }
 
-//algorithm utilization up to O(2square(n))
+
 size_t countStream(const char* inwhat, const char* bywhat) {
     size_t
         idx = 0,
@@ -147,3 +148,4 @@ size_t replaced(const char**inwhat,const char*bywhat,const char*by) {
         printf("there can't be an default in switch case\n");
     }
 }
+// feel free to clear comments if you count every byte which is awful @ 27.7.25 # 17:42
